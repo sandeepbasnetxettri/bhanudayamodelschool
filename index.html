@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhanudaya Model Secondary School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <link rel="website icon"   type="jng" href="image/sa.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        secondary: "#1e40af",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-card:hover {
+            transform: scale(1.02);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-ticker {
+            animation: ticker 20s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-12 h-12 flex items-center justify-center">
+                    <i class="ri-school-line text-primary text-3xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900">
+                    Bhanudaya Model School
+                </h1>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary">About</a>
+                <a href="facilities.html" class="text-gray-700 hover:text-primary">Facilities</a>
+                <a href="academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+                <a href="achievements.html" class="text-gray-700 hover:text-primary">Achievements</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-primary transition-colors">gallery</a>      
+            </div>
+            <button class="lg:hidden w-10 h-10 flex items-center justify-center">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="pt-20 relative min-h-screen flex items-center"
+            style="background-image: url(image/school\ new\ building.jpg); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/30"></div>
+            <div class="container mx-auto px-4 py-20 relative">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                        Welcome to Bhanudaya Model School
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section id="stats" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-user-star-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">2500+</h3>
+                        <p class="text-gray-600">Students Enrolled</p>
+                    </div>
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-team-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">150+</h3>
+                        <p class="text-gray-600">Expert Faculty</p>
+                    </div>
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-medal-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">25+</h3>
+                        <p class="text-gray-600">Years of Excellence</p>
+                    </div>
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-trophy-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">100%</h3>
+                        <p class="text-gray-600">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="facilities" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        World-Class Facilities
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Experience learning in state-of-the-art facilities designed to
+                        nurture talent and foster growth.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="facility-card bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300">
+                        <img src="image/no.3.jpg"
+                            alt="Science Lab" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                Advanced Science Labs
+                            </h3>
+                            <p class="text-gray-600">
+                                State-of-the-art laboratories equipped with modern apparatus
+                                for practical learning.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="facility-card bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300">
+                        <img src="image/all school.jpg"
+                            alt="Library" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                Digital Library
+                            </h3>
+                            <p class="text-gray-600">
+                                Extensive collection of books and digital resources for
+                                research and learning.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="facility-card bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300">
+                        <img src="image/121.jpg"
+                            alt="Sports Complex" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                Sports Complex
+                            </h3>
+                            <p class="text-gray-600">
+                                Multi-purpose sports facilities for physical education and
+                                competitions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="achievements" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        Our Achievements
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Celebrating excellence in academics, sports, and extra-curricular
+                        activities.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-award-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Best School Award 2024
+                        </h3>
+                        <p class="text-gray-600">
+                            Recognized for excellence in education and infrastructure
+                            development.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-medal-2-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            100% Board Results
+                        </h3>
+                        <p class="text-gray-600">
+                            Consistent academic excellence with outstanding board exam
+                            results.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-trophy-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Sports Champions
+                        </h3>
+                        <p class="text-gray-600">
+                            State-level winners in multiple sports categories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        What People Say
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Hear from our students, parents, and alumni about their
+                        experience.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Emily Thompson</h4>
+                                <p class="text-gray-600">Parent</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "The dedication of teachers and the quality of education here is
+                            exceptional. My children have grown tremendously both
+                            academically and personally."
+                        </p>
+                    </div>
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Michael Chen</h4>
+                                <p class="text-gray-600">Student</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "The school provides amazing opportunities for overall
+                            development. I've participated in numerous competitions and
+                            activities that have boosted my confidence."
+                        </p>
+                    </div>
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sarah Williams</h4>
+                                <p class="text-gray-600">Alumni</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "My years at Bhanudaya laid a strong foundation for my career.
+                            The values and education I received here continue to guide me in
+                            my professional life."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                            Get in Touch
+                        </h2>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Have questions? We'd love to hear from you. Send us a message
+                            and we'll respond as soon as possible.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                                    <i class="ri-map-pin-line text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Address</h4>
+                                    <p class="text-gray-600">
+                                        Dumkibas-1 Nawalpur
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                                    <i class="ri-phone-line text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Phone</h4>
+                                    <p class="text-gray-600">+977(984-7562432) or (985-7088315)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                                    <i class="ri-mail-line text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Email</h4>
+                                    <p class="text-gray-600">bhanudayahss071@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="bg-white p-8 rounded-lg shadow-sm">
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="name">Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                                    placeholder="Your name" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                                    placeholder="Your email" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                                    placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Home</a></li>
+                        <li><a href="#" class="hover:underline">About</a></li>
+                        <li><a href="#" class="hover:underline">Facilities</a></li>
+                        <li><a href="#" class="hover:underline">Academics</a></li>
+                        <li><a href="#" class="hover:underline">Achievements</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p>Dumkibas-1 Nawalpur</p>
+                    <p>+977(984-7562432) or (985-7088315)</p>
+                    <p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-facebook-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-twitter-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-instagram-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-youtube-fill text-2xl"></i>
+                        </a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.querySelector("button.lg\\:hidden");
+            const nav = document.querySelector("nav div.hidden");
+            mobileMenuButton.addEventListener("click", function () {
+                nav.classList.toggle("hidden");
+                nav.classList.toggle("flex");
+                nav.classList.toggle("flex-col");
+                nav.classList.toggle("absolute");
+                nav.classList.toggle("top-full");
+                nav.classList.toggle("left-0");
+                nav.classList.toggle("right-0");
+                nav.classList.toggle("bg-white");
+                nav.classList.toggle("p-4");
+            });
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                console.log("Form submitted:", data);
+                const notification = document.createElement("div");
+                notification.className =
+                    "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg";
+                notification.textContent = "Message sent successfully!";
+                document.body.appendChild(notification);
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+                form.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>

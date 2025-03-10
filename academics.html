@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhanudaya Model Secondary School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <link rel="website icon"   type="jng" href="image/sa.png">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2563eb",
+                        secondary: "#1e40af",
+                    },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .facility-card:hover {
+            transform: scale(1.02);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-ticker {
+            animation: ticker 20s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-12 h-12 flex items-center justify-center">
+                    <i class="ri-school-line text-primary text-3xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900">
+                    Bhanudaya Model School
+                </h1>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary">About</a>
+                <a href="facilities.html" class="text-gray-700 hover:text-primary">Facilities</a>
+                <a href="academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+                <a href="achievements.html" class="text-gray-700 hover:text-primary">Achievements</a>      
+                <a href="gallery.html" class="text-gray-700 hover:text-primary transition-colors">gallery</a>          
+            </div>
+            <button class="lg:hidden w-10 h-10 flex items-center justify-center">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class="pt-20 relative min-h-screen flex items-center"
+            style="background-image: url(image/download.jfif); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-white/30"></div>
+            <div class="container mx-auto px-4 py-20 relative">
+                <div class="max-w-2xl">
+                    <h1 class="text-5xl font-bold text-gray-900 mb-6">
+                        Welcome to Bhanudaya Model School
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <img src="image/all school.jpg"
+                            alt="About Us" class="rounded-lg shadow-lg" />
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                            About Bhanudaya Model School
+                        </h2>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Founded in 2028, Bhanudaya Model Secondary School has been a
+                            pioneer in providing quality education that combines academic
+                            excellence with character development. Our mission is to nurture
+                            young minds and help them realize their full potential.
+                        </p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <p class="text-gray-700">
+                                    Comprehensive curriculum focusing on academic excellence and
+                                    practical skills
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <p class="text-gray-700">
+                                    Experienced faculty dedicated to nurturing each student's
+                                    unique talents
+                                </p>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <p class="text-gray-700">
+                                    State-of-the-art facilities supporting both academic and
+                                    extracurricular activities
+                                </p>
+                            </div>
+                        </div>
+                        <button
+                            class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 flex items-center gap-2">
+                            <i class="ri-arrow-right-line"></i>
+                            Learn More About Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="stats" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-user-star-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">2500+</h3>
+                        <p class="text-gray-600">Students Enrolled</p>
+                    </div>
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-team-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">150+</h3>
+                        <p class="text-gray-600">Expert Faculty</p>
+                    </div>
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-medal-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">25+</h3>
+                        <p class="text-gray-600">Years of Excellence</p>
+                    </div>
+                    <div class="stats-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-trophy-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-4xl font-bold text-primary mb-2">100%</h3>
+                        <p class="text-gray-600">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="facilities" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        World-Class Facilities
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Experience learning in state-of-the-art facilities designed to
+                        nurture talent and foster growth.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="facility-card bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300">
+                        <img src="image/no.3.jpg"
+                            alt="Science Lab" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                Advanced Science Labs
+                            </h3>
+                            <p class="text-gray-600">
+                                State-of-the-art laboratories equipped with modern apparatus
+                                for practical learning.
+                            </p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-sm text-gray-500">Capacity: 40 students</span>
+                                <button class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm"
+                                    onclick="showFacilityDetails('labs')">
+                                    Learn more <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="facility-card bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300">
+                        <img src="image/12.jpg"
+                            alt="Library" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                Digital Library
+                            </h3>
+                            <p class="text-gray-600">
+                                Extensive collection of books and digital resources for
+                                research and learning.
+                            </p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-sm text-gray-500">20,000+ Books</span>
+                                <button class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm"
+                                    onclick="showFacilityDetails('library')">
+                                    Learn more <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="facility-card bg-white rounded-lg overflow-hidden shadow-sm transition-all duration-300">
+                        <img src="image/424953073_3607504086190422_3307859112127934101_n.jpg"
+                            alt="Sports Complex" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">
+                                Sports Complex
+                            </h3>
+                            <p class="text-gray-600">
+                                Multi-purpose sports facilities for physical education and
+                                competitions.
+                            </p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-sm text-gray-500">10+ Sports</span>
+                                <button class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm"
+                                    onclick="showFacilityDetails('sports')">
+                                    Learn more <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="facilityModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-lg max-w-2xl w-full mx-4 relative">
+                        <button onclick="closeFacilityModal()"
+                            class="absolute right-4 top-4 text-gray-500 hover:text-gray-700">
+                            <i class="ri-close-line text-2xl"></i>
+                        </button>
+                        <div class="p-8">
+                            <h3 id="facilityTitle" class="text-2xl font-bold text-gray-900 mb-4"></h3>
+                            <div id="facilityContent" class="prose text-gray-600"></div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const facilityDetails = {
+                        labs: {
+                            title: "Advanced Science Labs",
+                            content: `
+            <div class="space-y-4">
+            <p>Our state-of-the-art science laboratories are equipped with the latest technology and equipment to provide hands-on learning experiences for our students.</p>
+            <ul class="list-disc pl-4">
+            <li>Physics Lab with modern experimental setups</li>
+            <li>Chemistry Lab with advanced safety features</li>
+            <li>Biology Lab with microscopes and specimens</li>
+            <li>Computer Lab with high-end workstations</li>
+            </ul>
+            <p>Each lab is supervised by experienced lab technicians and follows strict safety protocols.</p>
+            </div>
+            `,
+                        },
+                        library: {
+                            title: "Digital Library",
+                            content: `
+            <div class="space-y-4">
+            <p>Our modern library combines traditional books with digital resources to create a comprehensive learning environment.</p>
+            <ul class="list-disc pl-4">
+            <li>20,000+ Books across various subjects</li>
+            <li>Digital catalog system for easy search</li>
+            <li>Online journals and research papers access</li>
+            <li>Quiet study areas and discussion rooms</li>
+            <li>Computer terminals for research</li>
+            </ul>
+            <p>Open Sunday  to Friday, 9:00 AM to 4:00 PM</p>
+            </div>
+            `,
+                        },
+                        sports: {
+                            title: "Sports Complex",
+                            content: `
+            <div class="space-y-4">
+            <p>Our sports complex offers world-class facilities for various indoor and outdoor sports activities.</p>
+            <ul class="list-disc pl-4">
+            <li>Indoor Basketball Court</li>
+            <li>Olympic-size Swimming Pool</li>
+            <li>Football Ground</li>
+            <li>Cricket Field</li>
+            <li>Badminton Courts</li>
+            <li>Table Tennis Room</li>
+            <li>Modern Gymnasium</li>
+            </ul>
+            <p>Professional coaches are available for training in all sports.</p>
+            </div>
+            `,
+                        },
+                    };
+                    function showFacilityDetails(facility) {
+                        const modal = document.getElementById("facilityModal");
+                        const title = document.getElementById("facilityTitle");
+                        const content = document.getElementById("facilityContent");
+                        title.textContent = facilityDetails[facility].title;
+                        content.innerHTML = facilityDetails[facility].content;
+                        modal.classList.remove("hidden");
+                        modal.classList.add("flex");
+                    }
+                    function closeFacilityModal() {
+                        const modal = document.getElementById("facilityModal");
+                        modal.classList.add("hidden");
+                        modal.classList.remove("flex");
+                    }
+                </script>
+            </div>
+        </section>
+        <section id="academics" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        Academic Excellence
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Our comprehensive curriculum is designed to nurture intellectual
+                        growth and prepare students for future success.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+                    <div>
+                        <div class="bg-white rounded-lg shadow-sm p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                                Academic Performance
+                            </h3>
+                            <div id="academicChart" class="w-full h-80"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="space-y-8">
+                            <div class="bg-white rounded-lg shadow-sm p-8">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                                    Key Programs
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                            <i class="ri-book-open-line text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900">STEM Education</h4>
+                                            <p class="text-gray-600">
+                                                Integrated approach to Science, Technology,
+                                                Engineering and Mathematics
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                            <i class="ri-global-line text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900">
+                                                International Exchange
+                                            </h4>
+                                            <p class="text-gray-600">
+                                                Cultural exchange programs with partner schools
+                                                worldwide
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                            <i class="ri-creative-commons-line text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-gray-900">Creative Arts</h4>
+                                            <p class="text-gray-600">
+                                                Comprehensive visual and performing arts curriculum
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-graduation-cap-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            College Preparation
+                        </h3>
+                        <p class="text-gray-600">
+                            Dedicated counseling and preparation for higher education
+                            admissions.
+                        </p>
+                        <div class="mt-4">
+                            <button class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm"
+                                onclick="showAcademicDetails('college')">
+                                Learn more <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-book-mark-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Special Education
+                        </h3>
+                        <p class="text-gray-600">
+                            Individualized support programs for students with special needs.
+                        </p>
+                        <div class="mt-4">
+                            <button class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm"
+                                onclick="showAcademicDetails('special')">
+                                Learn more <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-calendar-check-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            After School Programs
+                        </h3>
+                        <p class="text-gray-600">
+                            Enrichment activities and academic support beyond regular hours.
+                        </p>
+                        <div class="mt-4">
+                            <button class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm"
+                                onclick="showAcademicDetails('afterSchool')">
+                                Learn more <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="academicModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+                    <div class="bg-white rounded-lg max-w-2xl w-full mx-4 relative">
+                        <button onclick="closeAcademicModal()"
+                            class="absolute right-4 top-4 text-gray-500 hover:text-gray-700">
+                            <i class="ri-close-line text-2xl"></i>
+                        </button>
+                        <div class="p-8">
+                            <h3 id="academicTitle" class="text-2xl font-bold text-gray-900 mb-4"></h3>
+                            <div id="academicContent" class="prose text-gray-600"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const chart = echarts.init(document.getElementById("academicChart"));
+
+                        const option = {
+                            animation: false,
+                            tooltip: {
+                                trigger: "axis",
+                                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                                textStyle: {
+                                    color: "#1f2937",
+                                },
+                            },
+                            legend: {
+                                data: ["Pass Rate", "Distinction Rate"],
+                                textStyle: {
+                                    color: "#1f2937",
+                                },
+                            },
+                            grid: {
+                                top: 60,
+                                right: 30,
+                                bottom: 30,
+                                left: 40,
+                            },
+                            xAxis: {
+                                type: "category",
+                                data: ["2020", "2021", "2022", "2023", "2024"],
+                                axisLabel: {
+                                    color: "#1f2937",
+                                },
+                            },
+                            yAxis: {
+                                type: "value",
+                                min: 0,
+                                max: 100,
+                                axisLabel: {
+                                    formatter: "{value}%",
+                                    color: "#1f2937",
+                                },
+                            },
+                            series: [
+                                {
+                                    name: "Pass Rate",
+                                    type: "line",
+                                    smooth: true,
+                                    data: [95, 96, 98, 97, 99],
+                                    lineStyle: {
+                                        color: "rgba(87, 181, 231, 1)",
+                                    },
+                                    areaStyle: {
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                            {
+                                                offset: 0,
+                                                color: "rgba(87, 181, 231, 0.1)",
+                                            },
+                                            {
+                                                offset: 1,
+                                                color: "rgba(87, 181, 231, 0)",
+                                            },
+                                        ]),
+                                    },
+                                },
+                                {
+                                    name: "Distinction Rate",
+                                    type: "line",
+                                    smooth: true,
+                                    data: [45, 48, 52, 55, 60],
+                                    lineStyle: {
+                                        color: "rgba(141, 211, 199, 1)",
+                                    },
+                                    areaStyle: {
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                            {
+                                                offset: 0,
+                                                color: "rgba(141, 211, 199, 0.1)",
+                                            },
+                                            {
+                                                offset: 1,
+                                                color: "rgba(141, 211, 199, 0)",
+                                            },
+                                        ]),
+                                    },
+                                },
+                            ],
+                        };
+
+                        chart.setOption(option);
+
+                        window.addEventListener("resize", function () {
+                            chart.resize();
+                        });
+                    });
+
+                    const academicDetails = {
+                        college: {
+                            title: "College Preparation Program",
+                            content: `
+                  <div class="space-y-4">
+                    <p>Our comprehensive college preparation program helps students navigate the complex college admission process and prepare for higher education.</p>
+                    <ul class="list-disc pl-4">
+                      <li>One-on-one college counseling</li>
+                      <li>SAT/ACT preparation courses</li>
+                      <li>College essay writing workshops</li>
+                      <li>College fair and campus visits</li>
+                      <li>Scholarship application assistance</li>
+                    </ul>
+                    <p>Our experienced counselors work closely with students to identify their interests, strengths, and career goals to find the best college fit.</p>
+                  </div>
+                `,
+                        },
+                        special: {
+                            title: "Special Education Program",
+                            content: `
+                  <div class="space-y-4">
+                    <p>Our special education program provides individualized support to ensure every student reaches their full potential.</p>
+                    <ul class="list-disc pl-4">
+                      <li>Individualized Education Programs (IEP)</li>
+                      <li>Specialized instruction and support services</li>
+                      <li>Assistive technology resources</li>
+                      <li>Regular progress monitoring</li>
+                      <li>Parent-teacher collaboration</li>
+                    </ul>
+                    <p>Our dedicated special education teachers work closely with regular classroom teachers to ensure seamless integration and support.</p>
+                  </div>
+                `,
+                        },
+                        afterSchool: {
+                            title: "After School Programs",
+                            content: `
+                  <div class="space-y-4">
+                    <p>Our after-school programs provide additional learning opportunities and enrichment activities in a supervised environment.</p>
+                    <ul class="list-disc pl-4">
+                      <li>Homework help and tutoring</li>
+                      <li>STEM clubs and activities</li>
+                      <li>Arts and music programs</li>
+                      <li>Sports and fitness activities</li>
+                      <li>Language and cultural programs</li>
+                    </ul>
+                    <p>Programs run Monday through Friday from 3:00 PM to 6:00 PM, providing flexible pickup times for parents.</p>
+                  </div>
+                `,
+                        },
+                    };
+
+                    function showAcademicDetails(program) {
+                        const modal = document.getElementById("academicModal");
+                        const title = document.getElementById("academicTitle");
+                        const content = document.getElementById("academicContent");
+
+                        title.textContent = academicDetails[program].title;
+                        content.innerHTML = academicDetails[program].content;
+
+                        modal.classList.remove("hidden");
+                        modal.classList.add("flex");
+                    }
+
+                    function closeAcademicModal() {
+                        const modal = document.getElementById("academicModal");
+                        modal.classList.add("hidden");
+                        modal.classList.remove("flex");
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section id="achievements" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        Our Achievements
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Celebrating excellence in academics, sports, and extra-curricular
+                        activities.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-award-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Best School Award 2024
+                        </h3>
+                        <p class="text-gray-600">
+                            Recognized for excellence in education and infrastructure
+                            development.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-medal-2-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            100% Board Results
+                        </h3>
+                        <p class="text-gray-600">
+                            Consistent academic excellence with outstanding board exam
+                            results.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-trophy-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                            Sports Champions
+                        </h3>
+                        <p class="text-gray-600">
+                            State-level winners in multiple sports categories.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                        What People Say
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Hear from our students, parents, and alumni about their
+                        experience.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Emily Thompson</h4>
+                                <p class="text-gray-600">Parent</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "The dedication of teachers and the quality of education here is
+                            exceptional. My children have grown tremendously both
+                            academically and personally."
+                        </p>
+                    </div>
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Michael Chen</h4>
+                                <p class="text-gray-600">Student</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "The school provides amazing opportunities for overall
+                            development. I've participated in numerous competitions and
+                            activities that have boosted my confidence."
+                        </p>
+                    </div>
+                    <div class="testimonial-card bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                                <i class="ri-user-line text-gray-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sarah Williams</h4>
+                                <p class="text-gray-600">Alumni</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "My years at Bhanudaya laid a strong foundation for my career.
+                            The values and education I received here continue to guide me in
+                            my professional life."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                            Get in Touch
+                        </h2>
+                        <p class="text-xl text-gray-600 mb-8">
+                            Have questions? We'd love to hear from you. Send us a message
+                            and we'll respond as soon as possible.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                                    <i class="ri-map-pin-line text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Address</h4>
+                                    <p class="text-gray-600">
+                                        Dumkibas-1 Nawalpur
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                                    <i class="ri-phone-line text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Phone</h4>
+                                    <p class="text-gray-600">+977(984-7562432) or (985-7088315)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                                    <i class="ri-mail-line text-primary text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Email</h4>
+                                    <p class="text-gray-600">bhanudayahss071@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="bg-white p-8 rounded-lg shadow-sm">
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="name">Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                                    placeholder="Your name" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                                    placeholder="Your email" />
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="message">Message</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-primary"
+                                    placeholder="Your message"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="about.html" class="hover:underline">About</a></li>
+                        <li><a href="facilities.html" class="hover:underline">Facilities</a></li>
+                        <li><a href="academics.html" class="hover:underline">Academics</a></li>
+                        <li><a href="achievements.html" class="hover:underline">Achievements</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p>Dumkibas-1 Nawalpur</p>
+                    <p>+977(984-7562432) or (985-7088315)</p>
+                    <p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-facebook-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-twitter-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-instagram-fill text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary">
+                            <i class="ri-youtube-fill text-2xl"></i>
+                        </a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuButton = document.querySelector("button.lg\\:hidden");
+            const nav = document.querySelector("nav div.hidden");
+            mobileMenuButton.addEventListener("click", function () {
+                nav.classList.toggle("hidden");
+                nav.classList.toggle("flex");
+                nav.classList.toggle("flex-col");
+                nav.classList.toggle("absolute");
+                nav.classList.toggle("top-full");
+                nav.classList.toggle("left-0");
+                nav.classList.toggle("right-0");
+                nav.classList.toggle("bg-white");
+                nav.classList.toggle("p-4");
+            });
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                console.log("Form submitted:", data);
+                const notification = document.createElement("div");
+                notification.className =
+                    "fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg";
+                notification.textContent = "Message sent successfully!";
+                document.body.appendChild(notification);
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+                form.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>
